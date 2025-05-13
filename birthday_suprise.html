@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Miss Universe 💫</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffe6f0, #ffcce0);
+      font-family: 'Segoe UI', sans-serif;
+      color: #ff3399;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 80px;
+      animation: typing 3s steps(30, end), blink 0.7s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff66b2;
+      display: inline-block;
+    }
+
+    .message {
+      font-size: 1.3em;
+      margin: 40px auto;
+      width: 80%;
+      line-height: 1.6em;
+      background: #fff0f5;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 153, 204, 0.2);
+      animation: fadeSlide 2s ease-in-out 3s forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .love {
+      font-size: 2em;
+      margin-top: 30px;
+      color: #ff0066;
+      animation: pulse 1.5s infinite alternate;
+    }
+
+    .signature {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #cc0066;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out 5s forwards;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ff66b2, 0 0 10px #ff99cc; }
+      to { text-shadow: 0 0 15px #ff3385, 0 0 25px #ff66b2; }
+    }
+
+    @keyframes fadeSlide {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      from { transform: scale(1); }
+      to { transform: scale(1.08); }
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .petal {
+      position: fixed;
+      width: 25px;
+      height: 25px;
+      background: url('https://i.ibb.co/x71V7jz/petal.png') no-repeat center;
+      background-size: contain;
+      animation: fall 10s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday, Miss Universe 💫</h1>
+
+  <div class="message">
+    Happy Birthday, my Miss Universe. On this special day, I want to remind you how incredibly amazing you are. 
+    You light up every room you walk into, and your smile can turn even the darkest days into sunshine. 
+    You deserve all the love, happiness, and magic this world can offer — not just today, but every single day. 
+    I’m endlessly grateful to know you, to laugh with you, and to admire you from near or far. 
+    You’re not just beautiful outside, but even more stunning on the inside — kind, thoughtful, and simply unforgettable. 
+    Every moment spent with you feels like a dream I never want to wake up from. 
+    I hope your day is filled with surprises, laughter, cake, and people who adore you as much as I do. 
+    You mean so much more than words can express. 
+    Today, I celebrate you — your birth, your heart, your soul. 
+    May this year bring you endless joy, success, and love. 
+    You are and will always be someone truly special to me. 
+    I love you, and I’m so lucky the universe made someone like you.
+  </div>
+
+  <div class="love">I love you</div>
+  <div class="signature">— Laksh 💖</div>
+
+  <!-- Music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/24/audio_b1b92f7075.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Petal Animation -->
+  <script>
+    const petals = 30;
+    for (let i = 0; i < petals; i++) {
+      let petal = document.createElement("div");
+      petal.className = "petal";
+      petal.style.left = Math.random() * 100 + "vw";
+      petal.style.animationDelay = Math.random() * 10 + "s";
+      petal.style.animationDuration = 8 + Math.random() * 5 + "s";
+      document.body.appendChild(petal);
+    }
+  </script>
+
+</body>
+</html>
